@@ -1,4 +1,4 @@
-#!/home/toby/opensource/jaiabot-python-venv/bin/python3
+#!python3
 
 """Simple FTDI EEPROM configurator.
 """

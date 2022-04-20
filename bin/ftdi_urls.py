@@ -1,4 +1,4 @@
-#!/home/toby/opensource/jaiabot-python-venv/bin/python3
+#!python3
 
 # Copyright (c) 2019-2022, Emmanuel Blot <emmanuel.blot@free.fr>
 # All rights reserved.

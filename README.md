@@ -22,6 +22,30 @@ source bin/activate
 pip3 install smbus adafruit-circuitpython-busdevice adafruit-circuitpython-register
 ```
 
+### Remove hardcoded paths
+
+Patch activate script:
+
+```
+--- a/bin/activate
++++ b/bin/activate
+@@ -36,8 +36,7 @@ deactivate () {
+ 
+ # unset irrelevant variables
+ deactivate nondestructive
+-
+-VIRTUAL_ENV="/home/toby/opensource/jaiabot-python-venv"
++VIRTUAL_ENV=$(realpath "$(dirname "$0")/..")
+ export VIRTUAL_ENV
+ 
+ _OLD_VIRTUAL_PATH="$PATH"
+```
+
+```
+# Remove hardcoded python3 (assumes activate used)
+for i in `grep -lr jaiabot-python-venv *`; do sed -i 's|#!.*jaiabot-python-venv/bin/python3|#!python3|' $i; done
+```
+
 ## Use
 To use it, simply activate:
 
