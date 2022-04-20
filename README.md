@@ -35,7 +35,7 @@ Patch activate script:
  deactivate nondestructive
 -
 -VIRTUAL_ENV="/home/toby/opensource/jaiabot-python-venv"
-+VIRTUAL_ENV=$(realpath "$(dirname "$0")/..")
++VIRTUAL_ENV=$(realpath "$(dirname "${BASH_SOURCE})")/..")
  export VIRTUAL_ENV
  
  _OLD_VIRTUAL_PATH="$PATH"

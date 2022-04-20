@@ -36,7 +36,7 @@ deactivate () {
 
 # unset irrelevant variables
 deactivate nondestructive
-VIRTUAL_ENV=$(realpath "$(dirname "$0")/..")
+VIRTUAL_ENV=$(realpath "$(dirname "${BASH_SOURCE})")/..")
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
