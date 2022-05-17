@@ -11,6 +11,7 @@ pip3 install smbus adafruit-circuitpython-busdevice adafruit-circuitpython-regis
 ## Creation
 This repository was created using:
 
+Do this on amd64 (Ubuntu 20.04):
 ```
 mkdir jaiabot-python-venv
 cd jaiabot-python-venv
@@ -21,6 +22,8 @@ source bin/activate
 # install dependencies
 pip3 install smbus adafruit-circuitpython-busdevice adafruit-circuitpython-register
 ```
+
+Repeat above on arm64 (Ubuntu 20.04), e.g. Raspberry Pi and then combine directories.
 
 ### Remove hardcoded paths
 
